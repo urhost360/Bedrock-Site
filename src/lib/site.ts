@@ -1,0 +1,38 @@
+export const SITE = {
+  name: "Pecan St. Station",
+  fullName: "Pecan St. Station Deli & Grill",
+  tagline: "Southern hospitality, served all day.",
+  address: "1005 W Pecan St, Pflugerville, TX 78660",
+  phone: "(512) 251-0296",
+  phoneHref: "tel:5122510296",
+  orderUrl: "https://order.urhost360pos.com/store/273cbbc3-a6cc-4288-89f9-b12dd6999710",
+  mapsUrl: "https://maps.google.com/?q=1005+W+Pecan+St,+Pflugerville,+TX+78660",
+  googlePlaceId: "ChIJH2ESH37JRIYRFMGSynfpnpU",
+  websiteUrl: "https://pecanstreetstation.com",
+  logoUrl: "/logo.png?v=2",
+  socials: {
+    facebook: "https://www.facebook.com/969267633218617",
+    instagram: "https://www.instagram.com/pecan.street.deli/",
+    x: "https://www.x.com/PecanStStation",
+    yelp: "https://www.yelp.com/biz/pecan-st-station-deli-and-grill-pflugerville",
+    yelpPhotos: "https://www.yelp.com/biz_photos/pecan-st-station-deli-and-grill-pflugerville",
+  },
+  hours: [
+    { day: "Mon", time: "6:00 AM – 9:00 PM" },
+    { day: "Tue", time: "6:00 AM – 9:00 PM" },
+    { day: "Wed", time: "6:00 AM – 9:00 PM" },
+    { day: "Thu", time: "6:00 AM – 9:00 PM" },
+    { day: "Fri", time: "6:00 AM – 9:00 PM" },
+    { day: "Sat", time: "7:00 AM – 9:00 PM" },
+    { day: "Sun", time: "7:00 AM – 3:00 PM" },
+  ],
+  specialHours: [
+    { date: "Thu, Nov 26, 2026", time: "Closed" },
+    { date: "Thu, Dec 24, 2026", time: "6:00 AM – 5:00 PM" },
+    { date: "Fri, Dec 25, 2026", time: "Closed" },
+  ],
+  menus: {
+    breakfast: "https://img1.wsimg.com/blobby/go/a8c44178-2313-4cff-8c5c-ad47552b1fb6/PSS%20Full%20Menu-1.2.26%20Breakfast%20no%20prices.pdf",
+    lunchDinner: "https://img1.wsimg.com/blobby/go/a8c44178-2313-4cff-8c5c-ad47552b1fb6/PSS%20Full%20Menu-1.2.26%20Lunch%20Dinner%20No%20Prices.pdf",
+  },
+};
