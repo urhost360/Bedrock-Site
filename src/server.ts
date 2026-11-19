@@ -44,8 +44,23 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+const REPLACEMENT_SITE = "https://www.timeoutsportsbarlongview.com";
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    // Permanent redirect for every request this server receives. The previous
+    // handlers stay in place and run only when the request is already on the
+    // destination host, which avoids a redirect loop.
+    if (new URL(request.url).origin !== new URL(REPLACEMENT_SITE).origin) {
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: REPLACEMENT_SITE,
+          "Cache-Control": "public, max-age=3600",
+        },
+      });
+    }
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

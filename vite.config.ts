@@ -23,6 +23,24 @@ export default defineConfig({
     }),
     nitro({
       preset: isVercel ? "vercel" : undefined,
+      // Edge redirect for every path, including static files. vercel.json
+      // carries the same rule for the Vercel platform merge.
+      routeRules: {
+        // Nitro gives /assets/** its own header rule, which is matched before
+        // the catch-all. Repeat the redirect there so those files move too.
+        "/assets/**": {
+          redirect: {
+            to: "https://www.timeoutsportsbarlongview.com",
+            status: 301,
+          },
+        },
+        "/**": {
+          redirect: {
+            to: "https://www.timeoutsportsbarlongview.com",
+            status: 301,
+          },
+        },
+      },
     }),
     viteReact(),
   ],
